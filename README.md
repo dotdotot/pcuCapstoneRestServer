@@ -12,9 +12,7 @@ Flask-RestApi Server
 
 ## 사전준비
 - Flask 설치</br>
-'''
-$ pip install flask
-'''
+    $ pip install flask </br>
 from flask import Flask, jsonify, request, redirect
 - rest api </br>
 from flask_restx import Api, Resource 
