@@ -1,17 +1,12 @@
-Flask-RestApi Server
-
-Flask-RestApi Server
-=======================
-
-## Projects
-## Flask-RestApi Server
+# Projects
+# Flask-RestApi Server
 🗓 프로젝트 소개 : Flask RestApi Server</br>
 🗓 기간 : 2022.10.03 ~   </br>
 🗓 팀원:  [준석](https://github.com/dotdotot)</br>
 🗓 리뷰어: [준석](https://github.com/dotdotot)</br></br>
 
-## 사전준비
-* Flask 설치</br>
+# 사전준비
+##  Flask 설치</br>
 <pre>
 <code>
 $ pip install flask
@@ -49,15 +44,56 @@ openssl genrsa -out rootCA.key 2048</br>
 CSR - 인증 서명 요청으로써 인증서를 발급하는데 필요한 키</br>
 oepnssl 명령어 관련 사이트 (https://www.openssl.org/docs/manmaster/man1/)
 
-## 백앤드 쿼리 및  뷰 
+# 백앤드 쿼리 및  뷰 
+## web</br>
 
+## android</br>
+* Password_encryption (비밀번호 암호화)
+* userJoin (get)
+* userMembership (get,post)
 
-## 백인드 사용한  프레임 워크 
+# 백인드 사용한  프레임 워크 
 * Flask
 * rest-api
 * mysql
+* logging
 
-## 사용한 라이브러리
+# 데이터베이스 테이블 설계
+create table user (</br>
+id varchar(20) not null unique primary key,</br>
+pw1 tinyblob not null,</br>
+pw2 tinyblob not null,</br>
+pw3 tinyblob not null,</br>
+pwKey tinyblob not null,</br>
+name varchar(5) not null,</br>
+nickname varchar(10) not null unique,</br>
+email varchar(30) not null,</br>
+phone varchar(13) not null,</br>
+joinMembershipDate datetime not null</br>
+)engine = InnoDB default charset=utf8mb4;</br></br>
+
+create table room (</br>
+roomNumber int(2) not null unique primary key,</br>
+roomName varchar(10) not null,</br>
+id varchar(20) not null unique,</br>
+foreign key(id) references user(id) on update cascade on delete cascade</br>
+)engine = InnoDB default charset=utf8mb4;</br></br>
+
+create table roomInfo(</br>
+roomNumber int(2) not null unique,</br>
+uploadTime datetime not null,</br>
+color varchar(3) not null,</br>
+temperature float not null,</br>
+humidity float not null,</br>
+fineDust float not null,</br>
+foreign key(roomNumber) references room(roomNumber) on update cascade on delete cascade</br>
+)engine = InnoDB default charset=utf8mb4;</br></br>
+
+* 데이터베이스 중요한 점
+* user 테이블에서 비밀번호가 여러개며 key를 가지고 있는 이유는 암호화를 진행했기 때문
+* 그렇기에 varchar타입이 아닌 바이너리 타입으로 저장해야함 tinyblob형식으로 저장
+
+# 사용한 라이브러리
 * os
 * Flask, jsonify, request, redirect
 * Api, Resource
@@ -66,9 +102,9 @@ oepnssl 명령어 관련 사이트 (https://www.openssl.org/docs/manmaster/man1/
 * datetime
 * logging, logging.config
 
-## 사용할 협업툴 
+# 사용할 협업툴 
 
-## Commit 규칙
+# Commit 규칙
 > 커밋 제목은 최대 50자 입력 </br>
 본문은 한 줄 최대 72자 입력 </br>
 Commit 메세지 </br>

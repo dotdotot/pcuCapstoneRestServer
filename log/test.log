@@ -1,0 +1,64 @@
+2022-10-06 20:31:36,580 - werkzeug - INFO -  * Running on https://203.250.133.144:8080 (Press CTRL+C to quit)
+2022-10-06 20:31:36,599 - werkzeug - INFO -  * Restarting with stat
+2022-10-06 20:31:37,036 - werkzeug - WARNING -  * Debugger is active!
+2022-10-06 20:31:37,042 - werkzeug - INFO -  * Debugger PIN: 101-077-132
+2022-10-06 20:31:50,408 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:31:50] "GET / HTTP/1.1" 200 -
+2022-10-06 20:31:51,043 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:31:51] "GET /swaggerui/droid-sans.css HTTP/1.1" 200 -
+2022-10-06 20:31:51,053 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:31:51] "GET /swaggerui/swagger-ui.css HTTP/1.1" 200 -
+2022-10-06 20:31:51,165 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:31:51] "GET /swaggerui/swagger-ui-bundle.js HTTP/1.1" 200 -
+2022-10-06 20:31:51,165 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:31:51] "GET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2022-10-06 20:31:51,292 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:31:51] "GET /swagger.json HTTP/1.1" 200 -
+2022-10-06 20:31:56,318 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:31:56] "GET / HTTP/1.1" 200 -
+2022-10-06 20:31:56,350 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:31:56] "GET /swaggerui/droid-sans.css HTTP/1.1" 200 -
+2022-10-06 20:31:56,355 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:31:56] "GET /swaggerui/swagger-ui.css HTTP/1.1" 200 -
+2022-10-06 20:31:56,362 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:31:56] "[36mGET /swaggerui/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2022-10-06 20:31:56,369 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:31:56] "[36mGET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2022-10-06 20:31:56,438 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:31:56] "GET /swagger.json HTTP/1.1" 200 -
+2022-10-06 20:31:56,447 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:31:56] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2022-10-06 20:32:01,379 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:32:01] "GET / HTTP/1.1" 200 -
+2022-10-06 20:32:01,413 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:32:01] "[36mGET /swaggerui/droid-sans.css HTTP/1.1[0m" 304 -
+2022-10-06 20:32:01,419 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:32:01] "[36mGET /swaggerui/swagger-ui.css HTTP/1.1[0m" 304 -
+2022-10-06 20:32:01,425 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:32:01] "[36mGET /swaggerui/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2022-10-06 20:32:01,431 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:32:01] "[36mGET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2022-10-06 20:32:01,478 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:32:01] "GET /swagger.json HTTP/1.1" 200 -
+2022-10-06 20:32:01,485 - werkzeug - INFO - 203.250.133.144 - - [06/Oct/2022 20:32:01] "GET /swaggerui/favicon-32x32.png HTTP/1.1" 200 -
+2022-10-06 20:32:21,714 - werkzeug - INFO -  * Detected change in 'c:\\vsCode\\pcuCapstoneProject\\server\\log\\log.py', reloading
+2022-10-06 20:32:21,789 - werkzeug - INFO -  * Restarting with stat
+2022-10-06 20:32:22,220 - werkzeug - WARNING -  * Debugger is active!
+2022-10-06 20:32:22,224 - werkzeug - INFO -  * Debugger PIN: 101-077-132
+2022-10-06 20:32:24,253 - werkzeug - INFO -  * Detected change in 'c:\\vsCode\\pcuCapstoneProject\\server\\capstone.py', reloading
+2022-10-06 20:32:24,291 - werkzeug - INFO -  * Restarting with stat
+2022-10-06 20:32:24,733 - werkzeug - WARNING -  * Debugger is active!
+2022-10-06 20:32:24,736 - werkzeug - INFO -  * Debugger PIN: 101-077-132
+2022-10-06 20:37:08,558 - werkzeug - INFO -  * Detected change in 'c:\\vsCode\\pcuCapstoneProject\\server\\capstone.py', reloading
+2022-10-06 20:37:08,649 - werkzeug - INFO -  * Restarting with stat
+2022-10-06 20:37:09,047 - werkzeug - WARNING -  * Debugger is active!
+2022-10-06 20:37:09,051 - werkzeug - INFO -  * Debugger PIN: 101-077-132
+2022-10-06 20:37:10,073 - werkzeug - INFO -  * Detected change in 'c:\\vsCode\\pcuCapstoneProject\\server\\log\\log.py', reloading
+2022-10-06 20:37:10,107 - werkzeug - INFO -  * Restarting with stat
+2022-10-06 20:37:10,508 - werkzeug - WARNING -  * Debugger is active!
+2022-10-06 20:37:10,511 - werkzeug - INFO -  * Debugger PIN: 101-077-132
+2022-10-06 20:41:55,470 - werkzeug - INFO -  * Detected change in 'c:\\vsCode\\pcuCapstoneProject\\server\\capstone.py', reloading
+2022-10-06 20:41:55,526 - werkzeug - INFO -  * Restarting with stat
+2022-10-06 20:41:56,063 - werkzeug - WARNING -  * Debugger is active!
+2022-10-06 20:41:56,067 - werkzeug - INFO -  * Debugger PIN: 101-077-132
+2022-10-06 20:56:18,792 - werkzeug - INFO -  * Detected change in 'c:\\vsCode\\pcuCapstoneProject\\server\\capstone.py', reloading
+2022-10-06 20:56:18,831 - werkzeug - INFO -  * Restarting with stat
+2022-10-06 20:56:19,164 - werkzeug - WARNING -  * Debugger is active!
+2022-10-06 20:56:19,167 - werkzeug - INFO -  * Debugger PIN: 101-077-132
+2022-10-06 20:56:21,200 - werkzeug - INFO -  * Detected change in 'c:\\vsCode\\pcuCapstoneProject\\server\\capstone.py', reloading
+2022-10-06 20:56:21,250 - werkzeug - INFO -  * Restarting with stat
+2022-10-06 20:56:21,594 - werkzeug - WARNING -  * Debugger is active!
+2022-10-06 20:56:21,598 - werkzeug - INFO -  * Debugger PIN: 101-077-132
+2022-10-06 20:56:41,971 - werkzeug - INFO -  * Detected change in 'c:\\vsCode\\pcuCapstoneProject\\server\\capstone.py', reloading
+2022-10-06 20:56:42,011 - werkzeug - INFO -  * Restarting with stat
+2022-10-06 20:56:42,359 - werkzeug - WARNING -  * Debugger is active!
+2022-10-06 20:56:42,363 - werkzeug - INFO -  * Debugger PIN: 101-077-132
+2022-10-06 20:56:45,420 - werkzeug - INFO -  * Detected change in 'c:\\vsCode\\pcuCapstoneProject\\server\\database\\db.py', reloading
+2022-10-06 20:56:45,491 - werkzeug - INFO -  * Restarting with stat
+2022-10-06 20:56:45,936 - werkzeug - WARNING -  * Debugger is active!
+2022-10-06 20:56:45,940 - werkzeug - INFO -  * Debugger PIN: 101-077-132
+2022-10-06 20:56:46,967 - werkzeug - INFO -  * Detected change in 'c:\\vsCode\\pcuCapstoneProject\\server\\capstone.py', reloading
+2022-10-06 20:56:47,003 - werkzeug - INFO -  * Restarting with stat
+2022-10-06 20:56:47,395 - werkzeug - WARNING -  * Debugger is active!
+2022-10-06 20:56:47,399 - werkzeug - INFO -  * Debugger PIN: 101-077-132
