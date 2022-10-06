@@ -49,9 +49,8 @@ openssl genrsa -out rootCA.key 2048</br>
 CSR - 인증 서명 요청으로써 인증서를 발급하는데 필요한 키</br>
 oepnssl 명령어 관련 사이트 (https://www.openssl.org/docs/manmaster/man1/)
 
-
-
 ## 백앤드 쿼리 및  뷰 
+
 
 ## 백인드 사용한  프레임 워크 
 * Flask
