@@ -15,7 +15,7 @@ app.config['JSON_AS_ASCII'] = False
 api = Api(app) 
 
 # android method attach
-api.add_resource(userJoin, "/user-join/<string:userid>/<string:userpw>")    
+api.add_resource(userJoin, "/userJoin/<string:id>/<string:pw>")    
 api.add_resource(userMembership, "/joinMembership/<string:id>")    
 api.add_resource(userMembership, "/joinMembership")    
 api.add_resource(allHooverInfo, "/allHooverInfo/<string:id>")

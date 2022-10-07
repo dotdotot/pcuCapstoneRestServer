@@ -1,3 +1,4 @@
+from pickle import TRUE
 from unicodedata import name
 from flask_restx import Resource 
 from flask import jsonify, request, redirect
@@ -20,7 +21,7 @@ class Password_encryption:
         ciphertext, tag = cipher.encrypt_and_digest(user_pw.encode('ascii'))
         return nonce, ciphertext, tag, key
     
-    # 디코딩
+    # 디코딩    
     def decoding(self,user_pw1,user_pw2,user_pw3,key):
         cipher = AES.new(key, AES.MODE_EAX, nonce=user_pw1)
         plaintext = cipher.decrypt(user_pw2)
@@ -31,8 +32,31 @@ class Password_encryption:
             return False
 
 class userJoin(Resource):
-    def get(self,userid,userpw):  
-        return "hello"
+    def get(self,id,pw):  
+        password_encryption = Password_encryption()
+        # MySQL Server connect
+        cur = conn.cursor()
+        
+        # inquiry
+        # MySQL commend implement
+        cur.execute("SELECT * FROM user")
+        # all row를 가져옴
+        res = cur.fetchall()
+        
+        # user id 조회
+        for i in res:
+            if (i[0] == id):
+                # 비밀번호 인코딩
+                user_pw1 = i[1]
+                user_pw2 = i[2]
+                user_pw3 = i[3]
+                key = i[4]
+                newPw = password_encryption.decoding(user_pw1,user_pw2,user_pw3,key)
+                if(newPw == pw):
+                    return "TRUE"
+                break
+        return "FALSE"
+    
 class userMembership(Resource):
     def get(self, id):
         password_encryption = Password_encryption()
@@ -97,6 +121,7 @@ class userMembership(Resource):
         vals = (id, pw1, pw2, pw3, pwKey, name, nickname, email, phone, user_date)
         cur.execute(sql,vals)
         conn.commit()
+        
 class allHooverInfo(Resource):
     def get(self,id):
         # MySQL sever connect
