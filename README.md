@@ -77,7 +77,7 @@ api.add_resource(hooverInfo, "/hooverInfo/<'string:id'>/<'string:roomNumber'>")
 * allHooverInfo (get)
 >> 아이디를 josn head에 입력받음
 >> 해당하는 모든 방의에 대한 정보를 return
-예시 쿼리문</br>
+mysql 쿼리문</br>
 SELECT * FROM roomInfo WHERE roomNumber = ((SELECT roomNumber FROM room WHERE id = "dotdotot" and roomName = "방3")) and date(uploadTime) between '2022-10-07' and '2023-01-07';</br>
 <code>
 api.add_resource(allHooverInfo, "/allHooverInfo/<'string:id'>")   
