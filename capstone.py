@@ -18,6 +18,8 @@ api = Api(app)
 api.add_resource(userJoin, "/user-join/<string:userid>/<string:userpw>")    
 api.add_resource(userMembership, "/joinMembership/<string:id>")    
 api.add_resource(userMembership, "/joinMembership")    
+api.add_resource(allHooverInfo, "/allHooverInfo/<string:id>")
+api.add_resource(hooverInfo, "/hooverInfo/<string:id>/<string:roomNumber>")
 
 # web method attach
 

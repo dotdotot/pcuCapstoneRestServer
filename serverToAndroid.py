@@ -97,3 +97,41 @@ class userMembership(Resource):
         vals = (id, pw1, pw2, pw3, pwKey, name, nickname, email, phone, user_date)
         cur.execute(sql,vals)
         conn.commit()
+class allHooverInfo(Resource):
+    def get(self,id):
+        # MySQL sever connect
+        cur = conn.cursor()
+        
+        # inquiry
+        sql = "SELECT * FROM roomInfo WHERE roomNumber in ((SELECT roomNumber FROM room WHERE id = %s))"
+        vals = id
+        
+        print(sql,vals);
+        # 쿼리 삽입
+        cur.execute(sql,vals)
+
+        # 모든 결과값을 가져옴
+        res = cur.fetchall()
+        
+        return jsonify(res)
+    
+class hooverInfo(Resource):
+    def get(self,id,roomNumber):
+        # MySQL sever connect
+        cur = conn.cursor()
+        
+        # inquiry
+        sql = "SELECT * FROM roomInfo WHERE roomNumber = (SELECT roomNumber FROM room WHERE id = %s and roomNumber = %s)"
+        vals = (id,roomNumber)
+        
+        print(sql,vals);
+        # 쿼리 삽입
+        cur.execute(sql,vals)
+
+        # 모든 결과값을 가져옴
+        res = cur.fetchall()
+        
+        return jsonify(res)
+    
+    def post(self):
+        return 1

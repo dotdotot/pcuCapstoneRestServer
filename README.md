@@ -50,12 +50,18 @@ oepnssl 명령어 관련 사이트 (https://www.openssl.org/docs/manmaster/man1/
 ## android</br>
 * Password_encryption (비밀번호 암호화)
 * userJoin (get)
->> 사용자에게 id와 pw를 입력받고 해당 아이디가 존재하는지 확인, 비밀번호를 인코딩하고 동일한지 확인한 후 동일하다면 ok 메세지 return</br>
+>> 사용자에게 id와 pw를 입력받고 해당 아이디가 존재하는지 확인, 비밀번호를 인코딩하고 동일한지 확인한 후 동일하다면 true 메세지 return</br>
 * userMembership (get,post)
 >> get방식은 사용자에 대한 모든 정보를 get해오는데 사용</br>
 json head부분에 사용자 아이디를 추가로 입력받고 해당 아이디가 존재한다면 id, pw, name, nickname, email, phone, joinMembershipDate를 return
 >> post방식은 사용자에게 id, pw, name, nickname, email, phone, joinMembershipDate를 json body로 받고 db에 올림 (비밀번호는 암호화진행)</br>
-(동일한 아이디가 존재하는지는 안드로이드에서 확인 or 서버에서 추가 메소드 제작)
+(동일한 아이디가 존재하는지는 안드로이드에서 확인 or 서버에서 추가 메소드 제작)</br>
+* hooverInfo (get)
+>> 아이디, 방번호를 json head에서 입력받음
+>> 해당하는 방의 번호, 업로드 시간, 색깔, 온도, 습도, 미세먼지모두 json bady에 감싸서 리턴해줍니다.
+* allHooverInfo (get)
+>> 아이디를 josn head에 입력받음
+>> 해당하는 모든 방의에 대한 정보를 return
 
 # 백인드 사용한  프레임 워크 
 * Flask
