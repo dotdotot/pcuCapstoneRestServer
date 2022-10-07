@@ -54,7 +54,7 @@ oepnssl 명령어 관련 사이트 (https://www.openssl.org/docs/manmaster/man1/
 * userJoin (get)
 >> 사용자에게 id와 pw를 입력받고 해당 아이디가 존재하는지 확인, 비밀번호를 인코딩하고 동일한지 확인한 후 동일하다면 true 메세지 return</br>
 <code>
-api.add_resource(userJoin, "/userJoin/<string:id>/<string:pw>")   
+api.add_resource(userJoin, "/userJoin/<string:id>/<string:pw>")</br>   
 </code>
 * userMembership (get,post)
 >> get방식은 사용자에 대한 모든 정보를 get해오는데 사용</br>
