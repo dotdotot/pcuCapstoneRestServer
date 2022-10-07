@@ -1,3 +1,4 @@
+import json
 from pickle import TRUE
 from unicodedata import name
 from flask_restx import Resource 
@@ -158,5 +159,20 @@ class hooverInfo(Resource):
         
         return jsonify(res)
     
-    def post(self):
-        return 1
+class hooverSpecificInfo(Resource):
+    def get(self,id,roomName,startDate,endDate):
+        # MySQL sever connect
+        cur = conn.cursor()
+        
+        # inquiry
+        sql = "SELECT * FROM roomInfo WHERE roomNumber = ((SELECT roomNumber FROM room WHERE id = %s and roomName = %s) and date(uploadTime) between %s and %s)"
+        vals = (id,roomName,startDate,endDate)
+        
+        print(sql,vals);
+        # 쿼리 삽입
+        cur.execute(sql,vals)
+
+        # 모든 결과값을 가져옴
+        res = cur.fetchall()
+        return jsonify(res)
+        

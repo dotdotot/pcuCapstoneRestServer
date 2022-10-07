@@ -20,6 +20,7 @@ api.add_resource(userMembership, "/joinMembership/<string:id>")
 api.add_resource(userMembership, "/joinMembership")    
 api.add_resource(allHooverInfo, "/allHooverInfo/<string:id>")
 api.add_resource(hooverInfo, "/hooverInfo/<string:id>/<string:roomNumber>")
+api.add_resource(hooverSpecificInfo, "/hooverSpecificInfo/<string:id>/<string:roomName>/<string:startDate>/<string:endDate>")
 
 # web method attach
 
