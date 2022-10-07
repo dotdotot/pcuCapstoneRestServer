@@ -52,7 +52,7 @@ oepnssl 명령어 관련 사이트 (https://www.openssl.org/docs/manmaster/man1/
 * userJoin (get)
 >> 사용자에게 id와 pw를 입력받고 해당 아이디가 존재하는지 확인, 비밀번호를 인코딩하고 동일한지 확인한 후 동일하다면 true 메세지 return</br>
 <code>
-api.add_resource(userJoin, "/userJoin/<string:id>/<string:pw>")   
+api.add_resource(userJoin, "/userJoin/<'string:id'>/<'string:pw'>")   
 </code></br></br>
 
 * userMembership (get,post)
@@ -61,7 +61,7 @@ json head부분에 사용자 아이디를 추가로 입력받고 해당 아이�
 >> post방식은 사용자에게 id, pw, name, nickname, email, phone, joinMembershipDate를 json body로 받고 db에 올림 (비밀번호는 암호화진행)</br>
 (동일한 아이디가 존재하는지는 안드로이드에서 확인 or 서버에서 추가 메소드 제작)</br>
 <code>
-api.add_resource(userMembership, "/joinMembership/<string:id>")   
+api.add_resource(userMembership, "/joinMembership/<'string:id'>")   
 api.add_resource(userMembership, "/joinMembership")
 </code></br></br>
 
@@ -69,7 +69,7 @@ api.add_resource(userMembership, "/joinMembership")
 >> 아이디, 방번호를 json head에서 입력받음
 >> 해당하는 방의 번호, 업로드 시간, 색깔, 온도, 습도, 미세먼지모두 json bady에 감싸서 리턴해줍니다.
 <code>
-api.add_resource(hooverInfo, "/hooverInfo/<string:id>/<string:roomNumber>")   
+api.add_resource(hooverInfo, "/hooverInfo/<'string:id'>/<'string:roomNumber'>")   
 </code></br></br>
 
 * allHooverInfo (get)
@@ -78,13 +78,13 @@ api.add_resource(hooverInfo, "/hooverInfo/<string:id>/<string:roomNumber>")
 예시 쿼리문</br>
 SELECT * FROM roomInfo WHERE roomNumber = ((SELECT roomNumber FROM room WHERE id = "dotdotot" and roomName = "방3")) and date(uploadTime) between '2022-10-07' and '2023-01-07';</br>
 <code>
-api.add_resource(allHooverInfo, "/allHooverInfo/<string:id>")   
+api.add_resource(allHooverInfo, "/allHooverInfo/<'string:id'>")   
 </code></br></br>
 
 * hooverSpecificInfo (get)
 >> 아이디, 방이름, 시작날짜, 종료날짜를 입력받고 해당하는 방의 시작날짜와 종료날짜 사이에 있는 모든 데이터를 return해줌
 <code>
-api.add_resource(hooverSpecificInfo, "/hooverSpecificInfo/<string:id>/<string:roomName>/<string:startDate>/<string:endDate>") 
+api.add_resource(hooverSpecificInfo, "/hooverSpecificInfo/<'string:id'>/<'string:roomName'>/<'string:startDate'>/<'string:endDate'>") 
 </code></br></br>
 
 ## android</br>
