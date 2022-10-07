@@ -61,7 +61,10 @@ json head부분에 사용자 아이디를 추가로 입력받고 해당 아이�
 >> post방식은 사용자에게 id, pw, name, nickname, email, phone, joinMembershipDate를 json body로 받고 db에 올림 (비밀번호는 암호화진행)</br>
 (동일한 아이디가 존재하는지는 안드로이드에서 확인 or 서버에서 추가 메소드 제작)</br>
 <code>
-api.add_resource(userMembership, "/joinMembership/<'string:id'>")</br>
+api.add_resource(userMembership, "/joinMembership/<'string:id'>")
+api.add_resource(userMembership, "/joinMembership")
+</code></br>
+<code>
 api.add_resource(userMembership, "/joinMembership")
 </code></br></br>
 
