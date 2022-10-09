@@ -10,6 +10,7 @@ import datetime
 
 from database.db import *
 
+# 비밀번호 암호화 class
 class Password_encryption:
     # 인코딩
     def encoding(self, user_pw):
@@ -30,6 +31,7 @@ class Password_encryption:
         except:
             return False
 
+# Web 사용자 로그인
 class userJoin(Resource):
     def get(self,id,pw):  
         password_encryption = Password_encryption()
